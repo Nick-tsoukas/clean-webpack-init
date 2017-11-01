@@ -17,10 +17,10 @@ let config = {
     },
     {
         test: /\.css$/,
-        use: ExtractTextWebpackPlugin.extract({
+        use: ['css-hot-loader'].concat(ExtractTextWebpackPlugin.extract({
+          fallback: 'style-loader',
           use: [ 'css-loader', 'sass-loader', 'postcss-loader' ],
-          fallback: 'style-loader'
-        })
+        }))
       }
   ]
 },
