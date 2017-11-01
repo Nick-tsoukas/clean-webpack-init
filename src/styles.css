@@ -1,0 +1,8 @@
+:root {
+  --color: red;
+}
+
+div {
+  display: flex;
+  color: var(--color);
+}
